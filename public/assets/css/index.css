@@ -1,0 +1,222 @@
+.main-container {
+    width: 80%;
+    margin: 0 150px;
+    transition: .6s;
+}
+
+.no-products {
+    margin: 0;
+    position: relative;
+    padding: 95px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#fruits-app {
+    display: flex;
+    flex-direction: column;
+}
+
+#vegetables-app {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: #009766 2px solid;
+    box-shadow: inset 0 0 29px -8px rgba(0, 151, 102,0.15);
+    transition: .6s;
+}
+
+.fruit-products-title {
+    margin-left: auto;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 28pt;
+    font-weight: bold;
+}
+
+.vegetable-products-title {
+    float: left;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 28pt;
+    font-weight: bold;
+}
+
+
+
+.product {
+    display: flex;
+    border-radius: 30px;
+    margin: 10px;
+    position: relative;
+    width: 180px;
+    height: 180px;
+    transition: .6s;
+    justify-content: center;
+}
+
+.product-name, .product-price, .product-description, .product-cart {
+    position: absolute;
+    justify-content: center;
+    display: none;
+}
+
+.product-name {
+    top: 5px;
+}
+
+.product-price {
+    font-weight: bold;
+    top: 80px;
+    background-color: rgba(0, 151, 102, 0.7);
+    border-radius: 10px;
+    padding: 5px 40px;
+    color: white;
+}
+
+.product-description {
+    top: 150px;
+    font-style: italic;
+    font-size: 10pt;
+}
+
+.product-cart {
+    bottom: 0;
+    transition: 1s;
+}
+
+.add-to-cart {
+    position: relative;
+    padding: 5px 10px;
+    background-color: #009766;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.item-amount {
+    position: absolute;
+    padding: 1px 5px;
+    font-size: 8pt;
+    background: red;
+    border-radius: 30px;
+    top: 5px;
+    left: 18px;
+}
+
+.add-item, .remove-item {
+    display: none;
+    padding: 5px 10px;
+    color: #009766;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.add-item {
+    transform: rotate(-180deg);
+    transition: 1s;
+}
+
+.remove-item {
+    padding: 4px 13px 4px 12px;
+    transform: rotate(180deg);
+    transition: 1s;
+}
+
+.hover:hover > div {
+    display: flex;
+    transform: translate(50);
+    transition: .6s;
+}
+
+.product-image {
+    margin: 0 auto;
+    height: 180px;
+    border-radius: 30px;
+    transition: .6s;
+}
+
+.hover:hover > .product-image {
+    opacity: .5;
+    transform: scale(.8);
+}
+
+.hover:hover {
+    box-shadow: 0 0 20px -8px rgba(0,0,0,0.3);
+    transition: .6s;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}
+
+.slider {
+    position: relative;
+    width: 1100px;
+    height: 220px;
+    margin: 0 auto;
+    transition: .6s;
+}
+
+.wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 1100px;
+    height: 220px;
+}
+
+.slider-items {
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: -1100px;
+    width: 10000px;
+}
+
+.slider-items.shifting {
+    transition: .6s;
+}
+
+.slide {
+    width: 1100px;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+    position: relative;
+}
+
+.control {
+    position: absolute;
+    top: 55%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    margin-top: -20px;
+}
+
+.prev, .next {
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.prev {
+    left: -20px;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+}
+
+.next {
+    right: -20px;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+}
+
+.prev:active, .next:active {
+    transform: scale(0.8);
+}
